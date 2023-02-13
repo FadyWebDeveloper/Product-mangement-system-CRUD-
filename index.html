@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product mangement system">
+  <title>Product mangement system</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body class="bg-light py-5">
+
+
+  <div class="container">
+    <h1 class="mx-auto w-75 text-center mt-5 py-2 text-bg-primary">Product mangement system</h1>
+    <div class="py-5 mx-auto w-75 ">
+      <label for="productname" class="fs-4 mb-2"> Product Name:</label>
+      <input type="text" name="" id="productname" class="form-control mb-3">
+      <p class="alert  alert-danger d-none" id="alertName">InvalideName // Start with only one Capital character and min 3 other characters</p>
+      <label for="productprice" class="fs-4 mb-2"> Product Price:</label>
+      <input type="number" name="" id="productprice" class="form-control">
+      <p class="alert  alert-danger d-none" id="alertPrice">InvalidePrice // Price between 1000 and 10000 </p>
+      <label for="productcategory" class="fs-4 mb-2"> Product Category:</label>
+      <select name="" id="productcategory" class="form-control ">
+        <optgroup label="Choose One" >
+
+        <option value="TV">TV</option>
+        <option value="Mobile">Mobile</option>
+        </optgroup>
+
+      </select>
+      <label for="productdesc" class="fs-4 mb-2"> Product Description:</label>
+      <textarea name="" id="productdesc" class="form-control mb-3"></textarea>
+      <p class="alert  alert-danger d-none" id="alertArea">InvalideDescription // Minimum write 50 characters </p>
+      <button class="btn btn-primary px-3 mb-5 fw-semibold" id="add"> Add Product</button>
+      <button class="btn btn-success  px-3 mb-5 d-none fw-semibold" id="update"> Upate Product</button>
+      <input type="search" name="" id="search" class="form-control w-75 mx-auto mb-3 fs-4 " placeholder="Search on Product">
+    </div>
+    <div class="table-responsive">
+          <table class=" table w-75 mx-auto text-center table-hover caption-top">
+      <caption class="text-center fs-2 fw-semibold mb-4 text-secondary">List of Products</caption>
+
+      <thead>
+        <th>index</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Category</th>
+        <th>Product Desc</th>
+        <th>update</th>
+        <th>delete</th>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
+    </table>
+    </div>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
